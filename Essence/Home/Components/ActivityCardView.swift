@@ -23,8 +23,7 @@ struct TodayCard: View {
 
     
     var body: some View {
-        
-        ZStack {
+            
             ZStack (alignment: .leading){
                 ZStack (alignment: .trailing) {
                 RoundedRectangle(cornerRadius: 20)
@@ -37,12 +36,12 @@ struct TodayCard: View {
                     .frame(width: 84, height: 91)
                     .clipped()
                 }.clipShape(RoundedRectangle(cornerRadius: 20))
-                    .shadow(radius: 10, x: 0, y:4)
+                    .shadow(radius:8, x: 0, y:4)
                 
                 VStack (alignment: .leading) {
                     Text("Today's Experience")
                         .font(.headline)
-                        .foregroundColor(Color("vermelho"))
+                        .foregroundColor(Color.essenceVermelho)
                         .padding(.init(top: 13, leading: 13, bottom: 5, trailing: 0))
                     
                     Text("For the days I'm really going through it and not okay.")
@@ -53,8 +52,8 @@ struct TodayCard: View {
                         .multilineTextAlignment(.leading)
                         .lineLimit(2)
                 }
-            }
         }
+            .padding(.init(top: 6, leading: 40, bottom: 6, trailing: 40))
     }
 }
 
